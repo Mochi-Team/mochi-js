@@ -49,6 +49,7 @@ export enum DiscoverListingType {
   default,
   rank,
   featured,
+  lastWatched,
 }
 
 export enum DiscoverListingOrientationType {
@@ -241,6 +242,11 @@ export type PlaylistGroup = {
    * If it is initialized but no variants are provided, it is assumed that there is no contents for this group.
    */
   variants?: PlaylistGroupVariant[];
+
+  /**
+   * The current group is the one that should be shown when playlist details are opened.
+   */
+  default?: boolean;
 };
 
 export type PlaylistGroupVariantID = string;
